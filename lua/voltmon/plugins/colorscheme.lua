@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
+	color = color or "gruvbox"
 	vim.cmd.colorscheme(color)
 
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -24,7 +24,6 @@ return {
 					functions = {},
 				},
 				sidebars = { "qf", "vista_kind", "terminal", "packer" },
-				-- Change the "hint" color to the "orange" color, and make the "error" color bright red
 				on_colors = function(colors)
 					colors.hint = colors.orange
 					colors.error = "#ff0000"
@@ -32,7 +31,6 @@ return {
 				day_brightness = 0.3,
 			})
 
-			-- vim.cmd.colorscheme("tokyonight-night")
 			-- ColorMyPencils("tokyonight-night")
 		end,
 	},
@@ -53,9 +51,7 @@ return {
 				transparent = false,
 			})
 
-			-- vim.cmd.colorscheme("rose-pine")
-			-- ColorMyPencils("rose-pine")
-			vim.cmd.hi("Comment gui=none")
+			-- ColorMyPencils("rose-pine-moon")
 		end,
 	},
 	{
@@ -87,7 +83,6 @@ return {
 				transparent_mode = false,
 			})
 
-			-- vim.cmd.colorscheme("gruvbox")
 			-- ColorMyPencils("gruvbox")
 		end,
 	},
@@ -100,8 +95,14 @@ return {
 				contrast = false,
 			})
 
-			vim.cmd.colorscheme("vscode")
-			ColorMyPencils("vscode")
+			-- ColorMyPencils("vscode")
+		end,
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		config = function()
+			ColorMyPencils("catppuccin")
 		end,
 	},
 }
